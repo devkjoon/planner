@@ -34,6 +34,12 @@ $(function () {
   // useful when saving the description in local storage?
   //
   // TODO: Add code to apply the past, present, or future class to each time
+  function updateTimes () {
+    let now = moment();
+    for (let i=0; i<scheduleTimes.length; i++) {
+      if now
+    }
+  };
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
@@ -44,6 +50,6 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-  let now = dayjs();
-  timeNow.innerText = now;
+  let time = dayjs();
+  timeNow.innerText = time;
 });
