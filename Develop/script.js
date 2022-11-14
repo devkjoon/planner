@@ -24,7 +24,7 @@ $(".colorcode").each(function () {
   if (divNumber < hour) {
     $(this).removeClass("future");
     $(this).addClass("past");
-  } else if (divNumber === hour) {
+  } else if (divNumber == hour) {
     $(this).addClass("present");
   } else if (divNumber > hour) {
     $(this).addClass("future");
