@@ -1,5 +1,9 @@
-var currentDate = moment().format("MMMM Do YYYY");
-$("#currentDay").text(currentDate);
+const now = setInterval(update, 1000);
+
+function update() {
+  let currentDate = moment().format("MMMM Do YYYY, h:mm:ss a");
+  $("#currentDay").text(currentDate);
+}
 
 $(".saveBtn").on("click", function () {
   var textValue = $(this).siblings(".description").val();
@@ -17,10 +21,10 @@ $("#15 textarea").val(localStorage.getItem("15"));
 $("#16 textarea").val(localStorage.getItem("16"));
 $("#17 textarea").val(localStorage.getItem("17"));
 
-var hour = moment().format("H");
+let hour = moment().format("H");
 
 $(".colorcode").each(function () {
-  var divNumber = parseInt($(this).attr("id"));
+  let divNumber = parseInt($(this).attr("id"));
   if (divNumber < hour) {
     $(this).removeClass("future");
     $(this).addClass("past");
